@@ -1,0 +1,128 @@
+:root{
+    --mainColor : black;
+    --secColor : white;
+    --hoverColor: #ff655c;
+    --transitionTime: all .4s ease;
+}
+body{
+    background-color: var(--mainColor);
+}
+#navbar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -250px;
+    z-index: 99;
+    display: flex;
+}
+.navLinks{
+    width: 250px;
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;   
+}
+.navLinks li{
+    padding-top: 30px;
+    opacity: 0;
+    margin: 1rem 0;
+}
+.navLinks li a{
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--secColor);
+    font-weight: 300;
+    font-size: 1.25rem;
+    transition: var(--transitionTime);
+}
+.navLinks li a:hover{
+    color: var(--hoverColor);
+}
+.restNav{
+    width: 60px;
+    background-color: var(--secColor);
+    padding: .5rem;
+}
+.socialArea {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.socialIcons a{
+    padding: .5rem;
+    text-decoration: none;
+    color: var(--secColor);
+    transition: var(--transitionTime);
+}
+.socialIcons a:hover{
+    color: var(--hoverColor);
+}
+.navLinks p{
+    color: rgba(238, 238, 238, 0.65);
+    padding: .5rem;
+}
+.openCloseNav i{
+    font-size: 1.75rem;
+    cursor: pointer;
+    color: var(--mainColor);
+    transition: var(--transitionTime);
+}
+.openCloseNav i:hover{
+    color: var(--hoverColor);
+}
+.share i {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--mainColor);
+    transition: var(--transitionTime);
+}
+.share i:hover {
+    color: var(--hoverColor);
+}
+/*  */
+.styleInput{
+    background-color: transparent;
+    color: var(--secColor);
+    transition: var(--transitionTime);
+    border: none;
+    border-bottom: 1px solid var(--secColor);
+}
+.styleInput:focus{
+    outline: 1px solid rgba(255, 255, 255, 0.445);
+}
+.content{
+    position: relative;
+    overflow: hidden;
+}
+.contentLayer{
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #707070ab;
+    color: var(--secColor);
+    transition: var(--transitionTime);
+}
+
+.contentLayer h2, .contentLayer h4, .contentLayer h5, .contentLayer p{
+    padding: 0 .5rem;
+}
+.content:hover .contentLayer{
+    top: 0;
+}
+/*  */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
